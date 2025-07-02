@@ -3,7 +3,11 @@
 <TabbedPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             x:Class="VSGeekApp.View.PaginaPrincipal.PaginaPrincipalPage"
-            xmlns:view="clr-namespace:VSGeekApp.View.PaginaPrincipal">
+            xmlns:view="clr-namespace:VSGeekApp.View.PaginaPrincipal"
+            xmlns:android="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.AndroidSpecific;assembly=Microsoft.Maui.Controls"
+            android:TabbedPage.ToolbarPlacement="Bottom"
+            android:TabbedPage.IsSmoothScrollEnabled="True"
+            SelectedTabColor="#e11d48">
     <NavigationPage Title="Inicio"
                     IconImageSource="icon_casa30.png">
         <x:Arguments>

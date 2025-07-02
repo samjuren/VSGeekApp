@@ -4,15 +4,17 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="VSGeekApp.View.PaginaPrincipal.PerfilPage"
              NavigationPage.HasNavigationBar="False">
-    <Grid RowDefinitions="auto,auto,auto,auto">
+    <Grid 
+        RowDefinitions="auto,auto,auto,auto" 
+        Padding="40,0,40,0"
+        VerticalOptions="Center">
         <Image 
             VerticalOptions="Start" 
             Source="vsgeek_logo.png"/>
         <Grid 
             Grid.Row="1"
             RowSpacing="20"
-            VerticalOptions="Start"
-            Padding="40,60,40,0"
+            VerticalOptions="Center"
             RowDefinitions="auto,auto,auto">
             <Grid RowDefinitions="auto,auto">
                 <Label 
@@ -51,12 +53,14 @@
         </Grid>
         <Label 
             Grid.Row="2" 
+            VerticalOptions="Start"
             HorizontalOptions="Center" 
             Padding="0,10,0,0" 
             Text="Esqueceu a senha?" 
             FontSize="16"/>
         <Grid
             Grid.Row="3"
+            VerticalOptions="Start"
             ColumnDefinitions="auto,auto" 
             HorizontalOptions="Center">
             <Label 

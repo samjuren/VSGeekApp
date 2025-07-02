@@ -21,7 +21,7 @@
 		<Nullable>enable</Nullable>
 
 		<!-- Display name -->
-		<ApplicationTitle>VSGeekApp</ApplicationTitle>
+		<ApplicationTitle>VS Geek</ApplicationTitle>
 
 		<!-- App Identifier -->
 		<ApplicationId>com.companyname.vsgeekapp</ApplicationId>
