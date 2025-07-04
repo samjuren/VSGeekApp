@@ -1,4 +1,5 @@
-﻿using VSGeekApp.View.PaginaPrincipal;
+﻿using VSGeekApp.View.PaginaApresentacao;
+using VSGeekApp.View.PaginaPrincipal;
 namespace VSGeekApp
 {
     public partial class App : Application
@@ -6,7 +7,8 @@ namespace VSGeekApp
         public App()
         {
             InitializeComponent();
-            MainPage =  new NavigationPage(new PaginaPrincipalPage());
+            Application.Current.UserAppTheme = AppTheme.Dark;
+            MainPage =  new NavigationPage(new PaginaApresentacaoPage());
         }
     }
 }
