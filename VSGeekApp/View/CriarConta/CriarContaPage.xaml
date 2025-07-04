@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VSGeekApp.View.CriarConta.CriarContaPage"
+             NavigationPage.HasNavigationBar="False">
+    <Grid RowDefinitions="auto,auto">
+        <Grid ColumnDefinitions="auto,*" Padding="10,0,0,0">
+            <Label 
+                Grid.Column="1"
+                Text="Criar uma conta"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                FontSize="20" 
+                FontAttributes="Italic"/>
+        </Grid>
+
+        <Grid 
+            Grid.Row="1"
+            RowDefinitions="auto,auto,auto,auto" 
+            Padding="40,30,40,0"
+            RowSpacing="20">
+            <Grid 
+                RowDefinitions="auto,auto"
+                RowSpacing="5">
+                <Label 
+                    Text="Nome"
+                    FontSize="16"/>
+                <Border 
+                    Grid.Row="1"
+                    Stroke="#151514"
+                    StrokeShape="RoundRectangle 10">
+                    <Entry 
+                        FontSize="16"
+                        BackgroundColor="#151514"
+                        ClearButtonVisibility="WhileEditing"/>
+                </Border>
+            </Grid>
+            <Grid 
+                Grid.Row="1" 
+                RowDefinitions="auto,auto">
+                <Label 
+                    Text="E-mail"
+                    FontSize="16"/>
+                <Border 
+                    Grid.Row="1"
+                    Stroke="#151514"
+                    StrokeShape="RoundRectangle 10">
+                    <Entry 
+                        FontSize="16"
+                        BackgroundColor="#151514"
+                        ClearButtonVisibility="WhileEditing"
+                        Keyboard="Email"/>
+                </Border >
+            </Grid>
+            <Grid 
+                Grid.Row="2"
+                RowDefinitions="auto,auto">
+                <Label 
+                    Text="Senha"
+                    FontSize="16"/>
+                <Border
+                    Grid.Row="1"
+                    Stroke="#151514"
+                    StrokeShape="RoundRectangle 10">
+                    <Entry 
+                        FontSize="16"
+                        BackgroundColor="#151514"
+                        ClearButtonVisibility="WhileEditing"
+                        Keyboard="Password"/>
+                </Border>
+            </Grid>
+            <Button 
+                Grid.Row="3" 
+                Text="Criar conta"
+                FontSize="16"
+                TextColor="White"
+                BackgroundColor="#e11d48"/>
+        </Grid>
+    </Grid>
+</ContentPage>

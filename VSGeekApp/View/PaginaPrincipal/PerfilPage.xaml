@@ -22,9 +22,10 @@
                     FontSize="16"/>
                 <Border
                     Grid.Row="1" 
+                    Stroke="#151514"
                     StrokeShape="RoundRectangle 5">
                     <Entry 
-                        Placeholder="Email" 
+                        BackgroundColor="#151514"
                         Keyboard="Email" 
                         ClearButtonVisibility="WhileEditing"
                         FontSize="16"/>
@@ -36,9 +37,12 @@
                 <Label
                     Text="Senha"
                     FontSize="16"/>
-                <Border Grid.Row="1" StrokeShape="RoundRectangle 5">
+                <Border 
+                    Grid.Row="1"
+                    Stroke="#151514"
+                    StrokeShape="RoundRectangle 5">
                     <Entry 
-                        Placeholder="Senha"
+                        BackgroundColor="#151514"
                         Keyboard="Password"
                         FontSize="16"
                         ClearButtonVisibility="WhileEditing"/>
@@ -65,14 +69,19 @@
             HorizontalOptions="Center">
             <Label 
                 Text="Não tem conta?"  
-                FontSize="16"/>
+                FontSize="16">
+            </Label>
             <Label 
                 Grid.Column="1" 
                 Margin="5,0,0,0" 
                 Text="Criar conta" 
                 FontSize="16"
                 TextColor="#e11d48"
-                FontAttributes="Bold" />
+                FontAttributes="Bold">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="CriarConta_Tapped"/>
+                </Label.GestureRecognizers>
+            </Label>
         </Grid>
     </Grid>
 </ContentPage>
