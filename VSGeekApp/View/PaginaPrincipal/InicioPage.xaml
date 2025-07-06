@@ -4,4 +4,65 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="VSGeekApp.View.PaginaPrincipal.InicioPage"
              BackgroundColor="#000000">
+    <Grid RowDefinitions="auto,auto,*,auto,auto,auto,auto">
+        <Image
+            VerticalOptions="Start"
+            Source="vsgeek_logo_tudovermelho.png" />
+        <Border
+            Grid.Row="1"
+            VerticalOptions="Start"
+            Stroke="#151514"
+            StrokeShape="RoundRectangle 10"
+            BackgroundColor="#151514"
+            Margin="20,10,20,0">
+            <Grid
+                ColumnDefinitions="auto,*"
+                Padding="10,0,0,0">
+                <Image
+                    Source="icon_pesquisar.png" />
+                <Entry
+                    Grid.Column="1"
+                    FontSize="16"
+                    BackgroundColor="#151514"
+                    Placeholder="Pesquisar" />
+            </Grid>
+        </Border>
+        <CollectionView
+            Grid.Row="2"
+            ItemsSource="{Binding TiposProdutosList}"
+            VerticalOptions="Start"
+            HorizontalOptions="Center"
+            Margin="20,20,20,0"
+            HorizontalScrollBarVisibility="Always">
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout
+                    Orientation="Horizontal"
+                    ItemSpacing="8"
+                    SnapPointsType="None" />
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <VerticalStackLayout
+                        Padding="0"
+                        Margin="0"
+                        VerticalOptions="Start">
+                        <Border
+                            BackgroundColor="{Binding ColorBorder}"
+                            Stroke="{Binding ColorStrokeBorder}"
+                            Padding="8,4"
+                            VerticalOptions="Start"
+                            StrokeShape="RoundRectangle 10">
+                            <Label
+                                Text="{Binding NomeProduto}"
+                                TextColor="{Binding ColorText}"
+                                FontSize="18" />
+                            <Border.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="BorderTiposProdutos_Tapped"/>
+                            </Border.GestureRecognizers>
+                        </Border>
+                    </VerticalStackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Grid>
 </ContentPage>

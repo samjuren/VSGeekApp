@@ -16,6 +16,13 @@
         </x:Arguments>
     </NavigationPage>
 
+    <NavigationPage Title="Carrinho"
+                    IconImageSource="icon_carrinho_compras.png">
+        <x:Arguments>
+            <view:CarrinhoComprasPage />
+        </x:Arguments>
+    </NavigationPage>
+    
     <NavigationPage Title="Favoritos"
                     IconImageSource="icon_gostei30.png">
         <x:Arguments>

@@ -5,84 +5,86 @@
              x:Class="VSGeekApp.View.PaginaPrincipal.PerfilPage"
              BackgroundColor="#000000"
              Title="Entrar">
-    <Grid 
-        RowDefinitions="auto,auto,auto,auto" 
-        Padding="40,0,40,0"
-        VerticalOptions="Center">
-        <Image 
-            VerticalOptions="Start" 
-            Source="vsgeek_logo_tudovermelho.png"/>
-        <Grid 
-            Grid.Row="1"
-            RowSpacing="20"
-            VerticalOptions="Center"
-            RowDefinitions="auto,auto,auto">
-            <Grid RowDefinitions="auto,auto">
-                <Label 
-                    Text="Email"
-                    FontSize="16"/>
-                <Border
-                    Grid.Row="1" 
-                    Stroke="#151514"
-                    StrokeShape="RoundRectangle 5">
-                    <Entry 
-                        BackgroundColor="#151514"
-                        Keyboard="Email" 
-                        ClearButtonVisibility="WhileEditing"
-                        FontSize="16"/>
-                </Border>
-            </Grid>
-            <Grid 
-                Grid.Row="1" 
-                RowDefinitions="auto,auto">
-                <Label
-                    Text="Senha"
-                    FontSize="16"/>
-                <Border 
-                    Grid.Row="1"
-                    Stroke="#151514"
-                    StrokeShape="RoundRectangle 5">
-                    <Entry 
-                        BackgroundColor="#151514"
-                        Keyboard="Password"
-                        FontSize="16"
-                        ClearButtonVisibility="WhileEditing"/>
-                </Border>
-            </Grid>
-            <Button 
-                Grid.Row="2" 
-                FontSize="16"
-                TextColor="White"
-                BackgroundColor="#e11d48"
-                Text="Login"/>
-        </Grid>
-        <Label 
-            Grid.Row="2" 
-            VerticalOptions="Start"
-            HorizontalOptions="Center" 
-            Padding="0,10,0,0" 
-            Text="Esqueceu a senha?" 
-            FontSize="16"/>
+    <ScrollView>
         <Grid
-            Grid.Row="3"
-            VerticalOptions="Start"
-            ColumnDefinitions="auto,auto" 
-            HorizontalOptions="Center">
-            <Label 
-                Text="Não tem conta?"  
-                FontSize="16">
-            </Label>
-            <Label 
-                Grid.Column="1" 
-                Margin="5,0,0,0" 
-                Text="Criar conta" 
-                FontSize="16"
-                TextColor="#e11d48"
-                FontAttributes="Bold">
-                <Label.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="CriarConta_Tapped"/>
-                </Label.GestureRecognizers>
-            </Label>
+            RowDefinitions="auto,auto,auto,auto"
+            Padding="40,0,40,0"
+            VerticalOptions="Center">
+            <Image
+                VerticalOptions="Start"
+                Source="vsgeek_logo_tudovermelho.png" />
+            <Grid
+                Grid.Row="1"
+                RowSpacing="20"
+                VerticalOptions="Center"
+                RowDefinitions="auto,auto,auto">
+                <Grid RowDefinitions="auto,auto">
+                    <Label
+                        Text="Email"
+                        FontSize="16" />
+                    <Border
+                        Grid.Row="1"
+                        Stroke="#151514"
+                        StrokeShape="RoundRectangle 5">
+                        <Entry
+                            BackgroundColor="#151514"
+                            Keyboard="Email"
+                            ClearButtonVisibility="WhileEditing"
+                            FontSize="16" />
+                    </Border>
+                </Grid>
+                <Grid
+                    Grid.Row="1"
+                    RowDefinitions="auto,auto">
+                    <Label
+                        Text="Senha"
+                        FontSize="16" />
+                    <Border
+                        Grid.Row="1"
+                        Stroke="#151514"
+                        StrokeShape="RoundRectangle 5">
+                        <Entry
+                            BackgroundColor="#151514"
+                            Keyboard="Password"
+                            FontSize="16"
+                            ClearButtonVisibility="WhileEditing" />
+                    </Border>
+                </Grid>
+                <Button
+                    Grid.Row="2"
+                    FontSize="16"
+                    TextColor="White"
+                    BackgroundColor="#e11d48"
+                    Text="Login" />
+            </Grid>
+            <Label
+                Grid.Row="2"
+                VerticalOptions="Start"
+                HorizontalOptions="Center"
+                Padding="0,10,0,0"
+                Text="Esqueceu a senha?"
+                FontSize="16" />
+            <Grid
+                Grid.Row="3"
+                VerticalOptions="Start"
+                ColumnDefinitions="auto,auto"
+                HorizontalOptions="Center">
+                <Label
+                    Text="Não tem conta?"
+                    FontSize="16">
+                </Label>
+                <Label
+                    Grid.Column="1"
+                    Margin="5,0,0,0"
+                    Text="Criar conta"
+                    FontSize="16"
+                    TextColor="#e11d48"
+                    FontAttributes="Bold">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="CriarConta_Tapped" />
+                    </Label.GestureRecognizers>
+                </Label>
+            </Grid>
         </Grid>
-    </Grid>
+    </ScrollView>
 </ContentPage>
